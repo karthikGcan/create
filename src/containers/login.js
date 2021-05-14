@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./login.css";
 import axios from 'axios';
-import Details from "./containers/details.js";
+import Details from "./details.js";
 
 export default function Login() {
   const [email, setEmail] = useState("");
