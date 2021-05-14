@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./login.css";
 import axios from 'axios';
+import Details from "./containers/details";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -15,12 +16,15 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    const callpost = 'https://dcb-karthik-deploy.herokuapp.com/posts';
     
-    axios.post('https://dcb-karthik-deploy.herokuapp.com/posts', {
+    axios.post(callpost, {
       username: email,
       password: password
     })
     .then(function (response) {
+      React.render( <Details /> , document.getElementById('details'));
       console.log(response);
     })
     .catch(function (error) {
