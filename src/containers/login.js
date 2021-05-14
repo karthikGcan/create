@@ -24,7 +24,7 @@ export default function Login() {
       password: password
     })
     .then(function (response) {
-      React.render( <Details /> , document.getElementById('details'));
+      ReactDOM.render( <Details/> , document.getElementById('details'));
       console.log(response);
     })
     .catch(function (error) {
