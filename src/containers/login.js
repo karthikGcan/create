@@ -16,7 +16,7 @@ export default function Login() {
   function handleSubmit(event) {
     event.preventDefault();
     
-    axios.post('http://localhost:5000/posts', {
+    axios.post('https://dcb-karthik-deploy.herokuapp.com/posts', {
       username: email,
       password: password
     })
